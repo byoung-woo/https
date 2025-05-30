@@ -11,11 +11,9 @@
 #include <sys/stat.h>
 
 void handle_request_path(SSL *ssl, const char *request) {
-    /* 원본: :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1} */
     char method[8], url[256], protocol[16];
     sscanf(request, "%s %s %s", method, url, protocol);
 
-    /* 3) 기타 GET */
     if (strcmp(url, "/") == 0) {
         const char *body = "<html><body><h1>Hello, User!</h1></body></html>";
         char resp[512];
