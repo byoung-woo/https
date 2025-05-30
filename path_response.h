@@ -7,5 +7,5 @@
 /* 요청 문자열(request) 분석 → 대응 응답을 SSL로 전송 */
 void handle_request_path(SSL *ssl, const char *request);
 
-#endif /* PATH_RESPONSE_H */
+#endif
 
