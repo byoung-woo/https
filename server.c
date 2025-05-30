@@ -40,7 +40,7 @@ static void handle_client_tls(SSL *ssl, struct sockaddr_in *caddr)
      *    NOTE: path_response.c / 기타 핸들러의 write() 호출을
      *          SSL_write()로 교체해야 완전한 TLS 응답이 됨.
      */
-    int fd = SSL_get_fd(ssl);   /* 원시 소켓 FD (임시호환) */
+    int fd = SSL_get_fd(ssl);  
     handle_request_path(ssl, buf);
 }
 
