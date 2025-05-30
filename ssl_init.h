@@ -14,5 +14,5 @@ void configure_server_context(SSL_CTX *ctx,
                               const char *cert_file,
                               const char *key_file);
 
-#endif /* SSL_INIT_H */
+#endif 
 
