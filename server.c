@@ -1,6 +1,4 @@
-/* server.c ― HTTPS 버전 (포트 8443)
- * 2025-05-09
- */
+/* server.c ― HTTPS 버전 (포트 8443) */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,17 +9,16 @@
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 
-#include "ssl_init.h"      /* ★ 신규 모듈 */
+#include "ssl_init.h"    
 #include "logger.h"
-#include "path_response.h" /* URL-별 처리 */
+#include "path_response.h" 
 
 #define PORT         8443
 #define BACKLOG      10
 #define BUFFER_SIZE  4096
 
-/* ---------------------------------------------------------- */
+
 /* 1. 클라이언트-당 TLS 세션 처리                              */
-/* ---------------------------------------------------------- */
 static void handle_client_tls(SSL *ssl, struct sockaddr_in *caddr)
 {
     char buf[BUFFER_SIZE];
@@ -46,7 +43,7 @@ static void handle_client_tls(SSL *ssl, struct sockaddr_in *caddr)
     int fd = SSL_get_fd(ssl);   /* 원시 소켓 FD (임시호환) */
     handle_request_path(ssl, buf);
 }
-/* ---------------------------------------------------------- */
+
 
 int main(void)
 {
