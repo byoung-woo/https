@@ -1,6 +1,5 @@
 
 /* client.c ― HTTPS 테스트 클라이언트
- *  (C) 2025-05-09, Capstone Project
  *
  *  • TLS 1.2 이상으로 서버에 접속
  *  • 간단한 HTTP GET 요청 전송 후 응답 본문을 stdout 으로 출력
