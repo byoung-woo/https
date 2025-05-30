@@ -1,6 +1,5 @@
 /*
  * ssl_init.c ― OpenSSL 초기화 + 컨텍스트 생성 (ECDHE-only)
- *  2025-05-09
  *
  *  변경 사항
  *  1) configure_server_context() 내부에
